@@ -2,6 +2,7 @@ GEM
   remote: https://rubygems.org/
   specs:
     curb (0.9.4)
+    dotenv (2.2.1)
     rack (1.6.8)
     rack-protection (1.5.3)
       rack
@@ -16,6 +17,7 @@ PLATFORMS
 
 DEPENDENCIES
   curb (~> 0.9.3)
+  dotenv (~> 2.1, >= 2.1.1)
   sinatra (~> 1.4, >= 1.4.7)
 
 BUNDLED WITH

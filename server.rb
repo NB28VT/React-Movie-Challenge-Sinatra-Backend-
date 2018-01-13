@@ -4,7 +4,8 @@ require 'net/http'
 
 before do
    content_type :json
-   headers 'Access-Control-Allow-Origin' => 'https://whos-init.herokuapp.com'
+   headers 'Access-Control-Allow-Origin' => '*'
+   # headers 'Access-Control-Allow-Origin' => 'https://whos-init.herokuapp.com'
    # Try without for now:
    # 'Access-Control-Allow-Methods' => ['OPTIONS', 'GET', 'POST']
 end

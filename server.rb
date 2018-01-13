@@ -21,11 +21,11 @@ get "/movie_data" do
 end
 
 get "/movie_thumbnail" do
-  uri = URI("https://image.tmdb.org/t/p/w500#{params[:poster_path]}?api_key=#{ENV['TMDB_V3_KEY']}")
+  uri = URI("https://image.tmdb.org/t/p/w500/#{params[:poster_path]}?api_key=#{ENV['TMDB_V3_KEY']}")
   Net::HTTP.get(uri)
 end
 
 get "/cast_thumbnail" do
-  uri = URI("https://image.tmdb.org/t/p/w500#{params[:profile_picture_path]}?api_key=#{ENV['TMDB_V3_KEY']}")
+  uri = URI("https://image.tmdb.org/t/p/w500/#{params[:profile_picture_path]}?api_key=#{ENV['TMDB_V3_KEY']}")
   Net::HTTP.get(uri)
 end

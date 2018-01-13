@@ -1,11 +1,13 @@
 require 'dotenv/load'
 require 'sinatra'
 require 'net/http'
+require 'pry'
 
 before do
    content_type :json
-   headers 'Access-Control-Allow-Origin' => '*'
-   # headers 'Access-Control-Allow-Origin' => 'https://whos-init.herokuapp.com'
+   # headers 'Access-Control-Allow-Origin' => '*'
+   headers 'Access-Control-Allow-Origin' => 'https://whos-init.herokuapp.com'
+   headers 'Access-Control-Allow-Origin' =>'http://localhost:3000'
    # Try without for now:
    # 'Access-Control-Allow-Methods' => ['OPTIONS', 'GET', 'POST']
 end

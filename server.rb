@@ -3,13 +3,18 @@ require 'sinatra'
 require 'net/http'
 require 'pry'
 
+configure :development do
+  ALLOWED_ORIGIN = 'http://localhost:3000'
+end
+
+
+configure :production do
+  ALLOWED_ORIGIN = 'https://whos-init.herokuapp.com'
+end
+
 before do
    content_type :json
-   # headers 'Access-Control-Allow-Origin' => '*'
-   headers 'Access-Control-Allow-Origin' => 'https://whos-init.herokuapp.com'
-   headers 'Access-Control-Allow-Origin' =>'http://localhost:3000'
-   # Try without for now:
-   # 'Access-Control-Allow-Methods' => ['OPTIONS', 'GET', 'POST']
+   headers 'Access-Control-Allow-Origin' => ALLOWED_ORIGIN
 end
 
 get "/movie_search" do

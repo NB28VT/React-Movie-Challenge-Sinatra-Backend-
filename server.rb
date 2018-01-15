@@ -29,8 +29,7 @@ end
 
 get "/movie_thumbnail" do
   uri = URI("https://image.tmdb.org/t/p/w500/#{params[:poster_path]}.jpg?api_key=#{ENV['TMDB_V3_KEY']}")
-  return {uri: uri}
-  # Net::HTTP.get(uri)
+  Net::HTTP.get(uri)
 end
 
 get "/cast_thumbnail" do

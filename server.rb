@@ -9,7 +9,7 @@ end
 
 
 configure :production do
-  ALLOWED_ORIGIN = 'https://whos-init.herokuapp.com'
+  ALLOWED_ORIGIN = 'https://whos-init.herokuapp.com http://whos-init.herokuapp.com'
 end
 
 before do
